@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andalis Burton | Higher Education Administration</title>
+  <meta name="description" content="Professional landing page for Andalis Burton, higher education administrator, executive assistant, and adjunct instructor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --color-bg: #f5f4f0;
+      --color-surface: #fbfaf7;
+      --color-surface-2: #f0ede7;
+      --color-border: #d8d3ca;
+      --color-divider: #ddd8cf;
+      --color-text: #25211c;
+      --color-text-muted: #69645d;
+      --color-text-faint: #9e9991;
+      --color-text-inverse: #fbfaf7;
+      --color-primary: #5c7060;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 10px 30px rgba(0,0,0,.08);
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      --content-default: 1140px;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #0d0f12;
+      --color-surface: #15181d;
+      --color-surface-2: #1d2128;
+      --color-border: #2b313a;
+      --color-divider: #262b33;
+      --color-text: #f0ece4;
+      --color-text-muted: #b1b5bd;
+      --color-text-faint: #7f8590;
+      --color-text-inverse: #12151a;
+      --color-primary: #7f9470;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.28);
+      --shadow-md: 0 18px 48px rgba(0,0,0,.38);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    body {
+      min-height: 100dvh;
+      background:
+        radial-gradient(circle at top right, rgba(127,148,112,0.09), transparent 30%),
+        radial-gradient(circle at left top, rgba(255,255,255,0.03), transparent 25%),
+        var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; transition: color var(--transition-interactive), border-color var(--transition-interactive), background var(--transition-interactive); }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+    img, svg { display: block; max-width: 100%; }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+    .skip-link { position: absolute; left: -9999px; top: var(--space-4); background: var(--color-surface); color: var(--color-text); padding: var(--space-3) var(--space-4); z-index: 100; }
+    .skip-link:focus { left: var(--space-4); }
+    .container { width: min(calc(100% - 2rem), var(--content-default)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .18em;
+    }
+    .eyebrow::before { content: ""; width: 2.5rem; height: 1px; background: var(--color-border); }
+    .site-header {
+      position: sticky; top: 0; z-index: 20; backdrop-filter: blur(16px);
+      background: rgba(13,15,18,0.74); border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-height: 4.5rem; }
+    .brand-mark { display: inline-flex; align-items: center; gap: var(--space-3); font-size: var(--text-sm); letter-spacing: .06em; text-transform: uppercase; }
+    .brand-mark svg { color: var(--color-primary); }
+    .nav-links { display: flex; gap: var(--space-5); align-items: center; }
+    .nav-links a { color: var(--color-text-muted); font-size: var(--text-sm); }
+    .nav-links a:hover { color: var(--color-text); }
+    .theme-toggle {
+      width: 44px; height: 44px; display: inline-grid; place-items: center;
+      border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-full);
+      color: var(--color-text-muted); background: rgba(255,255,255,0.02);
+    }
+    .hero { padding: clamp(var(--space-16), 14vw, 10rem) 0 var(--space-20); min-height: 88vh; display: grid; align-items: end; }
+    .hero-grid { display: grid; gap: var(--space-12); grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr); align-items: end; }
+    .hero h1 {
+      font-family: var(--font-display); font-size: clamp(3.3rem, 8vw, 6.6rem); line-height: .94; letter-spacing: -0.04em; font-weight: 400; max-width: 9ch;
+    }
+    .hero-subtitle { margin-top: var(--space-4); color: var(--color-text); font-size: var(--text-lg); font-weight: 500; }
+    .hero-copy p { color: var(--color-text-muted); max-width: 62ch; margin-top: var(--space-6); font-size: clamp(1.05rem, 1rem + .3vw, 1.16rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
+    .button {
+      min-height: 44px; padding: .9rem 1.2rem; border-radius: var(--radius-full); display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      border: 1px solid rgba(255,255,255,0.08); font-size: var(--text-sm);
+    }
+    .button-primary { background: var(--color-text); color: var(--color-text-inverse); border-color: transparent; }
+    .button-primary:hover { background: #ffffff; }
+    .button-secondary { color: var(--color-text); background: rgba(255,255,255,0.02); }
+    .button-secondary:hover { border-color: rgba(255,255,255,0.18); }
+    .hero-panel, .card, .timeline-item, .contact-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);
+    }
+    .hero-panel { padding: var(--space-8); }
+    .hero-panel h2, .section-head h2 {
+      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 400; line-height: 1; letter-spacing: -0.03em;
+    }
+    .hero-panel p, .section-head p, .card p, .timeline-item p, .contact-card p { color: var(--color-text-muted); }
+    .hero-stats { display: grid; gap: var(--space-5); margin-top: var(--space-6); }
+    .hero-stat small { display: block; color: var(--color-text-faint); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .14em; margin-bottom: .45rem; }
+    .hero-stat strong { font-size: var(--text-base); font-weight: 500; }
+    main section { padding: clamp(var(--space-12), 9vw, var(--space-24)) 0; border-top: 1px solid var(--color-divider); }
+    .section-head { display: grid; gap: var(--space-6); margin-bottom: var(--space-10); grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: start; }
+    .section-head p { max-width: 62ch; }
+    .grid-3 { display: grid; gap: var(--space-5); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { display: grid; gap: var(--space-6); grid-template-columns: 1fr 1fr; }
+    .card { padding: var(--space-8); }
+    .card h3, .timeline-item h3 { font-size: clamp(1.2rem, 1rem + .5vw, 1.55rem); line-height: 1.15; font-weight: 600; }
+    .card .meta, .timeline-item .meta { color: var(--color-text-faint); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .14em; margin-bottom: var(--space-4); }
+    .stack { display: grid; gap: var(--space-4); }
+    .timeline { display: grid; gap: var(--space-5); }
+    .timeline-item { padding: var(--space-8); }
+    .timeline-item ul { margin-top: var(--space-4); padding-left: 1.1rem; color: var(--color-text-muted); }
+    .timeline-item li + li { margin-top: .6rem; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+    .pill {
+      padding: .65rem .9rem; border-radius: var(--radius-full); background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      color: var(--color-text-muted); font-size: var(--text-sm);
+    }
+    .contact-card { padding: var(--space-8); display: grid; gap: var(--space-6); grid-template-columns: 1fr auto; align-items: center; }
+    .footer { padding: var(--space-10) 0 var(--space-16); color: var(--color-text-faint); font-size: var(--text-xs); }
+    @media (max-width: 980px) {
+      .hero-grid, .section-head, .grid-3, .grid-2, .contact-card, .portfolio-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { min-height: auto; }
+      .hero h1 { max-width: 8ch; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding-top: var(--space-16); }
+      .hero-panel, .card, .timeline-item, .contact-card { padding: var(--space-6); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+      .brand-mark span:last-child { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand-mark" aria-label="Andalis Burton home">
+        <svg width="22" height="22" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M10 38L23.8 10L38 38" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.5 28H31.2" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <span>Andalis Burton</span>
+      </a>
+      <nav aria-label="Primary navigation" class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Higher Education Leadership Support</div>
+          <h1>Andalis Burton</h1>
+          <div class="hero-subtitle">Executive Assistant to the Dean | Adjunct Instructor | University Operations Professional</div>
+          <p>Higher education professional with experience spanning academic instruction, executive administration, enrollment operations, student support, financial aid coordination, event logistics, and AI-assisted digital resource development. My work combines leadership support, systems documentation, institutional coordination, and student-centered operations. </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">View experience</a>
+            <a class="button button-secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Professional overview">
+          <h2>Executive profile</h2>
+          <p>I support dean-level administrative work while also serving in instructional and student-facing capacities. My background reflects a blend of operational execution, academic coordination, financial communication, reporting, and process improvement within higher education.</p>
+          <div class="hero-stats">
+            <div class="hero-stat"><small>Current institution</small><strong>Charleston Southern University</strong></div>
+            <div class="hero-stat"><small>Primary areas</small><strong>Dean's office support, enrollment operations, instructional oversight, and university reporting</strong></div>
+            <div class="hero-stat"><small>Additional strengths</small><strong>Systems guidance, vendor coordination, digital resource creation, and cross-functional communication</strong></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Professional focus</div>
+            <h2>Administrative leadership with academic credibility.</h2>
+          </div>
+          <p>This version of the site is designed for a more executive-facing audience. It emphasizes your institutional experience, role progression, and operational range in a format that reads more like a university leadership profile than a personal portfolio.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="meta">Dean's office operations</div>
+            <h3>Executive administration</h3>
+            <p>Support for vendor coordination, financial processing, payroll administration, reporting, budget-related workflows, and event logistics within an academic leadership environment.</p>
+          </article>
+          <article class="card">
+            <div class="meta">Academic support</div>
+            <h3>Instruction and student progress</h3>
+            <p>Instructor of Record responsibilities for internship courses, including academic progress review, employer learning agreements, requirement validation, and final grade authorization.</p>
+          </article>
+          <article class="card">
+            <div class="meta">Process improvement</div>
+            <h3>Systems and resource development</h3>
+            <p>Creation of onboarding materials, centralized information tools, and AI-assisted digital resources that improve clarity, training, and institutional coordination.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Institutional and professional history.</h2>
+          </div>
+          <p>Your recent positions show a strong progression through university administration, enrollment operations, and instructional work, while your earlier production and logistics experience reinforces operational versatility and process discipline.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="meta">May 2026 - Present | Charleston Southern University</div>
+            <h3>Adjunct Instructor, Nielsen College of Business</h3>
+            <ul>
+              <li>Serve as Instructor of Record for summer internship courses for undergraduate students.</li>
+              <li>Oversee academic progress, employer learning agreements, internship requirement validation, student reflections, and final grade authorization in support of ELR compliance.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <div class="meta">November 2023 - Present | Charleston Southern University</div>
+            <h3>Executive Assistant to the Dean, Nielsen College of Business</h3>
+            <ul>
+              <li>Support executive-level administrative operations for the Dean, including vendor coordination, financial processing, payroll administration, operational reporting, and event logistics.</li>
+              <li>Directed the creation of a centralized travel portal using AI-assisted web development to organize program information, financial schedules, and itineraries for international business students.</li>
+              <li>Managed invoice generation, audit, reimbursement processing, and contract-related coordination involving external vendors and university financial leadership.</li>
+              <li>Prepared data-driven reports to support decision-making and annual budget compliance.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <div class="meta">October 2022 - November 2023 | Charleston Southern University</div>
+            <h3>Graduate Enrollment Specialist, Office of Enrollment</h3>
+            <ul>
+              <li>Provided prospective students with full-cycle admissions and enrollment support, including scheduling guidance and academic program communication.</li>
+              <li>Communicated cost-of-attendance information, financial aid resources, and payment plan options as a primary student-facing contact.</li>
+              <li>Authored onboarding guidance for CRM and ERP systems to improve staff training, data collection, and record accuracy.</li>
+              <li>Developed external relationships with chambers of commerce and professional offices to strengthen graduate program engagement and workforce connectivity.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <div class="meta">July 2021 - August 2022 | Sepire, LLC</div>
+            <h3>Sales and Production Team Member</h3>
+            <ul>
+              <li>Trained across production, prepress, project management, assembly, warehouse, and operations functions to build working knowledge of the full production chain.</li>
+              <li>Supported receiving, packing, shipment preparation, inventory control, and delivery logistics.</li>
+              <li>Maintained client communication throughout production cycles and coordinated sample kit staging and distribution.</li>
+              <li>Designed marketing collateral and managed monthly blog content focused on print strategy and supporting business infrastructure.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Education</div>
+            <h2>Academic preparation.</h2>
+          </div>
+          <p>Your educational background supports both operations-oriented and communication-oriented work, pairing graduate supply chain training with undergraduate preparation in graphic communications. </p>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <div class="meta">Graduate degree</div>
+            <h3>Master of Science in Supply Chain Management</h3>
+            <p>Charleston Southern University, Charleston, South Carolina, 2026.</p>
+          </article>
+          <article class="card">
+            <div class="meta">Undergraduate degree</div>
+            <h3>Bachelor of Science in Graphic Communications</h3>
+            <p>Clemson University, Clemson, South Carolina, 2022.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Skills</div>
+            <h2>Operational and digital capabilities.</h2>
+          </div>
+          <p>This section highlights the combination of institutional tools, communication platforms, and digital workflows reflected in your CV.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card stack">
+            <div class="meta">Technical skills</div>
+            <h3>Platforms and systems</h3>
+            <div class="pill-list">
+              <span class="pill">Microsoft Office Suite</span>
+              <span class="pill">Adobe Acrobat</span>
+              <span class="pill">Adobe Creative Cloud</span>
+              <span class="pill">GitHub Pages</span>
+              <span class="pill">ChatGPT</span>
+              <span class="pill">Grok</span>
+              <span class="pill">Claude</span>
+              <span class="pill">Gemini</span>
+              <span class="pill">Perplexity</span>
+            </div>
+          </article>
+          <article class="card stack">
+            <div class="meta">Credentials</div>
+            <h3>Additional training and certifications</h3>
+            <div class="pill-list">
+              <span class="pill">OSHA Powered Industrial Truck Standard Certification, 29CFR1910.178</span>
+              <span class="pill">AI-assisted web development using Perplexity and GitHub Pages</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Portfolio</div>
+            <h2>Selected digital and design work.</h2>
+          </div>
+          <p>This section highlights a recent university web project and selected marketing collateral from Sepire. Together they show experience across web communication, layout, brand support, and visual asset development.</p>
+        </div>
+        <div class="grid-2" style="align-items:start; margin-bottom: var(--space-6);">
+          <article class="card stack">
+            <div class="meta">Featured web project</div>
+            <h3>Nielsen College travel portal</h3>
+            <p>A centralized travel portal developed to organize program information, schedules, and travel-related resources for university stakeholders.</p>
+            <a class="button button-secondary" href="https://aburtoncsu.github.io/nielsencollege.travel-csuniv.edu/" target="_blank" rel="noopener noreferrer">View live site</a>
+          </article>
+          <article class="card stack">
+            <div class="meta">Design portfolio</div>
+            <h3>Sepire marketing collateral</h3>
+            <p>Selected pieces from prior marketing and production support work, including branded covers, holiday graphics, production imagery, and layout-driven visual assets.</p>
+          </article>
+        </div>
+        <div class="portfolio-grid" style="display:grid; gap: var(--space-5); grid-template-columns: repeat(3, minmax(0, 1fr));">
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_01.jpg" alt="Sepire portfolio cover with production facility imagery and brand mark" width="1200" height="1600" loading="lazy"><figcaption><strong>Portfolio cover</strong><br><span style="color: var(--color-text-muted);">Industrial print production and brand presentation.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_02.jpg" alt="Sepire branded page with geometric orange gradient background" width="1200" height="900" loading="lazy"><figcaption><strong>Brand identity application</strong><br><span style="color: var(--color-text-muted);">Warm geometric treatment with logo-forward composition.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_03.jpg" alt="Sepire branded abstract line pattern in orange tones" width="1200" height="1600" loading="lazy"><figcaption><strong>Pattern system</strong><br><span style="color: var(--color-text-muted);">Graphic line work supporting collateral consistency.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_04.jpg" alt="Sepire holiday card design on orange background" width="1200" height="900" loading="lazy"><figcaption><strong>Seasonal campaign</strong><br><span style="color: var(--color-text-muted);">Holiday messaging adapted to brand palette.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_05.jpg" alt="Sepire holiday design in dark green with circular decorations" width="1200" height="900" loading="lazy"><figcaption><strong>Holiday variation</strong><br><span style="color: var(--color-text-muted);">Alternate campaign palette with stronger contrast.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_06.jpg" alt="Sepire holiday design in pale peach with circular decorations" width="1200" height="900" loading="lazy"><figcaption><strong>Holiday variation</strong><br><span style="color: var(--color-text-muted);">Soft seasonal treatment within a branded system.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_07.jpg" alt="Photographic graphic of typing on laptop with email symbols and Sepire logo" width="1200" height="900" loading="lazy"><figcaption><strong>Digital communication graphic</strong><br><span style="color: var(--color-text-muted);">Email and messaging visual designed for campaign use.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_08.jpg" alt="Sepire production facility image with orange branded overlay" width="1200" height="1600" loading="lazy"><figcaption><strong>Production feature</strong><br><span style="color: var(--color-text-muted);">Facility photography integrated with brand overlay.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_09.jpg" alt="Sepire branded geometric block pattern with logo" width="1200" height="900" loading="lazy"><figcaption><strong>Layout study</strong><br><span style="color: var(--color-text-muted);">Modular composition for presentation and collateral use.</span></figcaption></figure>
+          <figure class="card stack"><img src="./assets/Sepire-LLC-Portfolio-2021-_Page_10.jpg" alt="Sepire branded production image with logo and polygonal banner" width="1200" height="1600" loading="lazy"><figcaption><strong>Production branding</strong><br><span style="color: var(--color-text-muted);">Final branded layout pairing photography and identity.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: 400; line-height: 1; margin-top: var(--space-4);">Professional inquiries and university-facing opportunities.</h2>
+            <p style="margin-top: var(--space-4);">Replace this section with your preferred professional email address, LinkedIn URL, or downloadable CV link before publishing.</p>
+          </div>
+          <a class="button button-primary" href="mailto:hello@example.com">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Professional landing page for Andalis Burton.</div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      let theme = root.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+      const setIcon = () => {
+        toggle.innerHTML = theme === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"></path></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>';
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      };
+      setIcon();
+      toggle.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        setIcon();
+      });
+    }());
+  </script>
+</body>
+</html>
